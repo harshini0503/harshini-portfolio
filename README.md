@@ -60,16 +60,5 @@ src/
     PortalDivider.js ← Section divider with spinning ring
     SoftSkillScatter.js ← Floating soft skill cards
   lib/
-    data.js          ← ALL your content (edit this to update portfolio)
-```
+    data.js
 
-## Customization
-
-All text content is in `src/lib/data.js` — edit that file to update anything.
-
-To add your photo: put `photo.jpg` in `public/` folder and update `About.js`:
-```jsx
-<div className="aimg">
-  <img src="/photo.jpg" alt="Harshini" style={{width:'100%',height:'100%',objectFit:'cover'}}/>
-</div>
-```
