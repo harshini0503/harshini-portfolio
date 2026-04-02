@@ -65,7 +65,7 @@ export default function Contact() {
               </div>
             </a>
 
-            <a href="https://github.com/harshinim5" target="_blank" rel="noopener noreferrer" className="crow">
+            <a href="https://github.com/harshini0503" target="_blank" rel="noopener noreferrer" className="crow">
               <div className="cico" style={{fontFamily:'monospace',fontSize:'.85rem',fontWeight:700}}>gh</div>
               <div>
                 <div className="cmlab">GitHub</div>
@@ -73,7 +73,7 @@ export default function Contact() {
               </div>
             </a>
 
-            <a href="https://www.linkedin.com/in/harshini-kanamathareddy" target="_blank" rel="noopener noreferrer" className="crow">
+            <a href="https://www.linkedin.com/in/harshini0503/" target="_blank" rel="noopener noreferrer" className="crow">
               <div className="cico">in</div>
               <div>
                 <div className="cmlab">LinkedIn</div>
