@@ -1,0 +1,113 @@
+<svg viewBox="0 0 1360 400" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Emotion-based music recommender illustration</title>
+<desc>Webcam facial emotion detection feeding a PyTorch model that generates a Spotify-style playlist waveform, in purple and gold.</desc>
+<defs>
+<linearGradient id="bgGradM" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0%" stop-color="#0d0820"/>
+  <stop offset="100%" stop-color="#1a0d35"/>
+</linearGradient>
+<linearGradient id="cardGradM" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0%" stop-color="#231250"/>
+  <stop offset="100%" stop-color="#160b34"/>
+</linearGradient>
+<marker id="arrM" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+  <path d="M2 1L8 5L2 9" fill="none" stroke="#6a4ab0" stroke-width="1.5"/>
+</marker>
+</defs>
+
+<rect x="0" y="0" width="1360" height="400" fill="url(#bgGradM)"/>
+<circle cx="1220" cy="60" r="200" fill="#8a5cf0" opacity="0.08"/>
+<circle cx="90" cy="350" r="150" fill="#e4c870" opacity="0.06"/>
+<g stroke="#3a2a70" stroke-width="1" opacity="0.4">
+  <line x1="0" y1="100" x2="1360" y2="100"/>
+  <line x1="0" y1="300" x2="1360" y2="300"/>
+</g>
+
+<g transform="translate(40,40)">
+  <rect x="0" y="0" width="330" height="320" rx="14" fill="url(#cardGradM)" stroke="#4a3480" stroke-width="1.5"/>
+  <text x="26" y="32" font-family="Georgia, serif" font-size="16" fill="#e8e0d0">Webcam feed</text>
+
+  <rect x="26" y="50" width="278" height="176" rx="10" fill="#0f0826"/>
+  <circle cx="165" cy="122" r="54" fill="none" stroke="#8a5cf0" stroke-width="2.2"/>
+  <circle cx="146" cy="110" r="5" fill="#c8a84a"/>
+  <circle cx="184" cy="110" r="5" fill="#c8a84a"/>
+  <path d="M140 142 q25 20 50 0" fill="none" stroke="#c8a84a" stroke-width="2.6" stroke-linecap="round"/>
+  <rect x="120" y="192" width="90" height="22" rx="11" fill="#8a5cf0" opacity="0.25"/>
+  <text x="165" y="207" font-family="Arial" font-size="11.5" fill="#e4d8ff" text-anchor="middle">Happy · 92%</text>
+
+  <text x="26" y="250" font-family="Arial" font-size="11.5" fill="#b0a0d8">PyTorch · EfficientNet</text>
+  <g transform="translate(26,262)">
+    <rect x="0" y="0" width="50" height="38" rx="6" fill="#8a5cf0" opacity="0.2" stroke="#8a5cf0" stroke-width="1"/>
+    <rect x="66" y="6" width="50" height="26" rx="6" fill="#8a5cf0" opacity="0.3" stroke="#8a5cf0" stroke-width="1"/>
+    <rect x="132" y="11" width="50" height="16" rx="6" fill="#c8a84a" opacity="0.4" stroke="#c8a84a" stroke-width="1"/>
+    <rect x="198" y="6" width="50" height="26" rx="6" fill="#8a5cf0" opacity="0.3" stroke="#8a5cf0" stroke-width="1"/>
+    <line x1="50" y1="19" x2="66" y2="19" stroke="#6a4ab0" stroke-width="1.5" marker-end="url(#arrM)"/>
+    <line x1="116" y1="19" x2="132" y2="19" stroke="#6a4ab0" stroke-width="1.5" marker-end="url(#arrM)"/>
+    <line x1="182" y1="19" x2="198" y2="19" stroke="#6a4ab0" stroke-width="1.5" marker-end="url(#arrM)"/>
+  </g>
+</g>
+
+<g transform="translate(400,40)">
+  <rect x="0" y="0" width="470" height="150" rx="14" fill="url(#cardGradM)" stroke="#4a3480" stroke-width="1.5"/>
+  <text x="24" y="28" font-family="Arial" font-size="12" fill="#b0a0d8">Generated playlist</text>
+  <g transform="translate(24,42)">
+    <rect x="0" y="55" width="16" height="80" fill="#8a5cf0"/>
+    <rect x="24" y="27" width="16" height="108" fill="#c8a84a"/>
+    <rect x="48" y="72" width="16" height="63" fill="#8a5cf0" opacity="0.7"/>
+    <rect x="72" y="9" width="16" height="126" fill="#e4c870"/>
+    <rect x="96" y="45" width="16" height="90" fill="#8a5cf0" opacity="0.6"/>
+    <rect x="120" y="63" width="16" height="72" fill="#8a5cf0" opacity="0.8"/>
+    <rect x="144" y="18" width="16" height="117" fill="#c8a84a" opacity="0.8"/>
+    <rect x="168" y="81" width="16" height="54" fill="#8a5cf0" opacity="0.5"/>
+    <rect x="192" y="36" width="16" height="99" fill="#8a5cf0"/>
+    <rect x="216" y="59" width="16" height="76" fill="#e4c870" opacity="0.7"/>
+    <rect x="240" y="13" width="16" height="122" fill="#8a5cf0" opacity="0.6"/>
+    <rect x="264" y="50" width="16" height="85" fill="#c8a84a"/>
+    <rect x="288" y="32" width="16" height="103" fill="#8a5cf0" opacity="0.7"/>
+    <rect x="312" y="68" width="16" height="67" fill="#8a5cf0"/>
+    <rect x="336" y="23" width="16" height="112" fill="#e4c870" opacity="0.8"/>
+    <rect x="360" y="54" width="16" height="81" fill="#8a5cf0" opacity="0.6"/>
+    <rect x="384" y="41" width="16" height="94" fill="#c8a84a" opacity="0.7"/>
+    <line x1="0" y1="135" x2="400" y2="135" stroke="#4a3480" stroke-width="1"/>
+  </g>
+  <rect x="24" y="188" width="150" height="24" rx="12" fill="#20b8a8" opacity="0.18"/>
+  <text x="36" y="204" font-family="Arial" font-size="10.5" fill="#20b8a8">Spotify API · live sync</text>
+</g>
+
+<g transform="translate(400,206)">
+  <rect x="0" y="0" width="470" height="154" rx="14" fill="url(#cardGradM)" stroke="#4a3480" stroke-width="1.5"/>
+  <text x="24" y="28" font-family="Arial" font-size="12" fill="#b0a0d8">Per-class confidence</text>
+  <g font-family="Arial" font-size="11.5" fill="#e8e0d0">
+    <text x="24" y="56">Happy</text>
+    <rect x="100" y="46" width="340" height="10" rx="5" fill="#2a1f50"/>
+    <rect x="100" y="46" width="300" height="10" rx="5" fill="#8a5cf0"/>
+    <text x="24" y="84">Calm</text>
+    <rect x="100" y="74" width="340" height="10" rx="5" fill="#2a1f50"/>
+    <rect x="100" y="74" width="150" height="10" rx="5" fill="#c8a84a"/>
+    <text x="24" y="112">Energetic</text>
+    <rect x="100" y="102" width="340" height="10" rx="5" fill="#2a1f50"/>
+    <rect x="100" y="102" width="90" height="10" rx="5" fill="#20b8a8"/>
+  </g>
+  <rect x="24" y="122" width="200" height="24" rx="12" fill="none" stroke="#4a3480" stroke-width="1.2"/>
+  <text x="36" y="138" font-family="Arial" font-size="10.5" fill="#c8a84a">Streamlit live dashboard</text>
+</g>
+
+<g transform="translate(910,40)">
+  <rect x="0" y="0" width="410" height="320" rx="14" fill="url(#cardGradM)" stroke="#4a3480" stroke-width="1.5"/>
+  <text x="24" y="30" font-family="Arial" font-size="12" fill="#b0a0d8">Two-tower embedding match</text>
+  <circle cx="90" cy="110" r="30" fill="none" stroke="#8a5cf0" stroke-width="2.2"/>
+  <text x="90" y="116" font-family="Arial" font-size="11" fill="#e8e0d0" text-anchor="middle">face</text>
+  <circle cx="230" cy="110" r="30" fill="none" stroke="#c8a84a" stroke-width="2.2"/>
+  <text x="230" y="116" font-family="Arial" font-size="11" fill="#e8e0d0" text-anchor="middle">song</text>
+  <line x1="122" y1="110" x2="198" y2="110" stroke="#e4c870" stroke-width="1.6" stroke-dasharray="4,4"/>
+  <text x="160" y="98" font-family="Arial" font-size="10" fill="#e4c870" text-anchor="middle">cosine sim</text>
+
+  <line x1="24" y1="164" x2="386" y2="164" stroke="#4a3480" stroke-width="1"/>
+  <text x="24" y="192" font-family="Arial" font-size="12" fill="#a090c8">Swappable backbone</text>
+  <text x="24" y="216" font-family="Arial" font-size="12" fill="#a090c8">Feedback-driven ranking</text>
+  <text x="24" y="240" font-family="Arial" font-size="12" fill="#a090c8">Docker-packaged inference</text>
+  <circle cx="380" cy="188" r="4.5" fill="#8a5cf0"/>
+  <circle cx="380" cy="212" r="4.5" fill="#8a5cf0"/>
+  <circle cx="380" cy="236" r="4.5" fill="#8a5cf0"/>
+</g>
+</svg>

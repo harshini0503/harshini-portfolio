@@ -12,6 +12,7 @@ import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
 import PortalDivider from '@/components/PortalDivider'
 import SoftSkillScatter from '@/components/SoftSkillScatter'
+import Buddy from '@/components/Buddy'
 import { SOFT_SKILLS } from '@/lib/data'
 
 // Client-only components (use browser APIs)
@@ -69,6 +70,7 @@ export default function Home() {
       <section className="sec" id="contact"><Contact /></section>
 
       <Footer />
+      <Buddy />
     </>
   )
 }

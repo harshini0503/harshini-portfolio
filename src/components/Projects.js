@@ -1,16 +1,26 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { PROJECTS } from '@/lib/data'
 
 export default function Projects() {
   const [filter, setFilter] = useState('all')
   const [active, setActive] = useState(PROJECTS[0].id)
   const [modal, setModal] = useState(null)
+  const [hi, setHi] = useState(0)
+  const [paused, setPaused] = useState(false)
   const cats = [{k:'all',l:'All'},{k:'ai',l:'AI / ML'},{k:'web',l:'Full-Stack'},{k:'ios',l:'iOS'},{k:'iot',l:'IoT'}]
   const visible = PROJECTS.filter(p => filter==='all' || p.cat===filter)
   const activeProjAll = PROJECTS.find(p=>p.id===active)
   const activeProj = visible.includes(activeProjAll) ? activeProjAll : visible[0]
   const proj = modal ? PROJECTS.find(p=>p.id===modal) : null
+
+  useEffect(() => { setHi(0) }, [activeProj && activeProj.id])
+  useEffect(() => {
+    if (!activeProj || paused) return
+    const n = activeProj.bullets.length
+    const t = setInterval(() => setHi(h => (h + 1) % n), 4200)
+    return () => clearInterval(t)
+  }, [activeProj, paused])
 
   return (
     <div className="proj-max">
@@ -70,6 +80,24 @@ export default function Projects() {
               <div className="pdetail-stack">
                 {activeProj.tags.map((t,i)=><span key={i} className="pdetail-chip">{t}</span>)}
               </div>
+
+              <div className="phl" onMouseEnter={()=>setPaused(true)} onMouseLeave={()=>setPaused(false)}>
+                <div className="phl-label">Highlight <span className="phl-count">{hi+1} / {activeProj.bullets.length}</span></div>
+                <div className="phl-body">
+                  <button className="phl-arrow" aria-label="Previous highlight"
+                    onClick={()=>setHi(h => (h - 1 + activeProj.bullets.length) % activeProj.bullets.length)}>‹</button>
+                  <p className="phl-text" key={hi}>{activeProj.bullets[hi]}</p>
+                  <button className="phl-arrow" aria-label="Next highlight"
+                    onClick={()=>setHi(h => (h + 1) % activeProj.bullets.length)}>›</button>
+                </div>
+                <div className="phl-dots">
+                  {activeProj.bullets.map((_,i)=>(
+                    <button key={i} aria-label={`Go to highlight ${i+1}`}
+                      className={`phl-dot${i===hi?' on':''}`} onClick={()=>setHi(i)}/>
+                  ))}
+                </div>
+              </div>
+
               <div className="pdetail-actions">
                 <button className="pdetail-cta" onClick={()=>setModal(activeProj.id)}>
                   Full Details ✦
