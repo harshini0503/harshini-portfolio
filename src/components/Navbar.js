@@ -11,7 +11,7 @@ export default function Navbar() {
         ))}
       </ul>
       <a
-        href="https://drive.google.com/file/d/1fqdOw7JaHlCtkBZ6cK3PPjVWlx0Vkr5H/view?usp=sharing"
+        href="https://drive.google.com/file/d/1x0byfVAJL_6gnc3wO-X3nlIHu8bdRzgA/view?usp=drive_link"
         target="_blank"
         rel="noopener noreferrer"
         className="nhire"

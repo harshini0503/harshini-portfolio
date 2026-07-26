@@ -71,7 +71,6 @@ export default function Hero() {
   return (
     <div className="hwrap">
       <div>
-        <div className="hbadge"><span className="bdot"/>&nbsp;Available · San Jose, CA · OPT Eligible</div>
         <div className="how"><span className="hname">HARSHINI</span></div>
         <div className="how"><span className="hname" style={{animationDelay:'.07s'}}>KANAMATHAREDDY</span></div>
         <div className="how" style={{marginTop:'.6rem'}}>

@@ -29,7 +29,7 @@ export default function Buddy() {
             <a href="#projects" className="buddy-chip" onClick={()=>setOpen(false)}>🚀 See projects</a>
             <a href="#skills" className="buddy-chip" onClick={()=>setOpen(false)}>🛠 Skills</a>
             <a href="#contact" className="buddy-chip" onClick={()=>setOpen(false)}>👋 Say hi</a>
-            <a href="https://drive.google.com/file/d/1fqdOw7JaHlCtkBZ6cK3PPjVWlx0Vkr5H/view?usp=sharing"
+            <a href="https://drive.google.com/file/d/1x0byfVAJL_6gnc3wO-X3nlIHu8bdRzgA/view?usp=drive_link"
               target="_blank" rel="noopener noreferrer" className="buddy-chip" onClick={()=>setOpen(false)}>📄 Resume</a>
           </div>
         </div>
