@@ -45,7 +45,7 @@ export default function Buddy() {
           onClick={handleClick}
           aria-label={open ? 'Close assistant' : 'Open assistant'}
         >
-          <svg viewBox="0 0 60 60" width="34" height="34">
+          <svg viewBox="0 0 60 60" width="44" height="44">
             <circle cx="30" cy="30" r="27" fill="none" stroke="rgba(200,168,74,.5)" strokeWidth="1.4"/>
             <line x1="30" y1="9" x2="30" y2="2" stroke="rgba(200,168,74,.8)" strokeWidth="1.6"/>
             <circle cx="30" cy="2" r="2.4" fill="var(--gold2)"/>

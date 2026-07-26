@@ -1178,7 +1178,7 @@ footer { background: rgba(4,5,8,0.85); padding: 2rem 5%; border-top: 1px solid r
 .buddy-stage { position: relative; width: 56px; height: 56px; }
 
 .buddy-btn {
-  width: 56px; height: 56px; border-radius: 50%;
+  width: 72px; height: 72px; border-radius: 50%;
   background: radial-gradient(circle,rgba(40,96,168,.35) 0%,rgba(7,8,16,.95) 72%);
   border: 1px solid rgba(200,168,74,.3);
   display: flex; align-items: center; justify-content: center;
@@ -1210,7 +1210,7 @@ footer { background: rgba(4,5,8,0.85); padding: 2rem 5%; border-top: 1px solid r
 .buddy-mouth { transition: transform .2s var(--ease); }
 
 .buddy-hand {
-  position: absolute; top: -6px; right: -4px; font-size: 15px;
+  position: absolute; top: -8px; right: -6px; font-size: 19px;
   opacity: 0; transform-origin: 70% 70%;
   animation: buddyWave 9s ease-in-out infinite;
   pointer-events: none;
@@ -1274,8 +1274,8 @@ footer { background: rgba(4,5,8,0.85); padding: 2rem 5%; border-top: 1px solid r
 
 .fan-wrap { display: flex; flex-direction: column; align-items: center; gap: .5rem; }
 .fan-hint {
-  font-size: .62rem; letter-spacing: .1em; text-transform: uppercase;
-  color: rgba(200,168,74,.55); display: flex; align-items: center; gap: .4rem;
+  font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; font-weight: 600;
+  color: rgba(200,168,74,.65); display: flex; align-items: center; gap: .4rem;
 }
 .fan-hint-arrow { display: inline-block; animation: hintBob 1.6s ease-in-out infinite; }
 @keyframes hintBob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(3px); } }
@@ -1288,16 +1288,16 @@ footer { background: rgba(4,5,8,0.85); padding: 2rem 5%; border-top: 1px solid r
   border: 1px solid rgba(232,224,208,.18);
   display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .55rem;
   box-shadow: 0 8px 20px rgba(0,0,0,.5);
-  transition: transform .4s var(--ease), box-shadow .3s;
+  transition: transform .12s ease-out, box-shadow .15s;
   text-decoration: none;
   cursor: pointer;
 }
 .fan-icon { display: flex; align-items: center; justify-content: center; }
 .fan-name {
   position: absolute; top: calc(100% + 9px); left: 50%; transform: translateX(-50%);
-  font-size: .62rem; font-weight: 700; white-space: nowrap; color: var(--gold2);
-  background: rgba(4,8,14,.92); border: 1px solid rgba(200,168,74,.3);
-  padding: .28rem .55rem; opacity: 0; pointer-events: none; transition: opacity .2s;
+  font-size: .82rem; font-weight: 700; white-space: nowrap; color: var(--gold2);
+  background: rgba(4,8,14,.94); border: 1px solid rgba(200,168,74,.35);
+  padding: .35rem .7rem; opacity: 0; pointer-events: none; transition: opacity .2s;
 }
 .fan-card:hover .fan-name { opacity: 1; }
 .fan-card:hover { box-shadow: 0 12px 26px rgba(200,168,74,.2); z-index: 9; }
@@ -1324,6 +1324,14 @@ footer { background: rgba(4,5,8,0.85); padding: 2rem 5%; border-top: 1px solid r
   .fan-wrap:hover .fan-card:nth-child(4) { transform: translate(calc(-50% + 38px),  -2px) rotate(0deg); }
   .fan-wrap:hover .fan-card:nth-child(5) { transform: translate(calc(-50% + 114px), 4px)  rotate(0deg); }
   .fan-wrap:hover .fan-card:nth-child(6) { transform: translate(calc(-50% + 190px), 10px) rotate(0deg); }
+
+  /* lift the individual card the mouse is actually on, on top of its fanned position */
+  .fan-wrap:hover .fan-card:nth-child(1):hover { transform: translate(calc(-50% - 190px), -8px) rotate(0deg) scale(1.05); }
+  .fan-wrap:hover .fan-card:nth-child(2):hover { transform: translate(calc(-50% - 114px), -14px) rotate(0deg) scale(1.05); }
+  .fan-wrap:hover .fan-card:nth-child(3):hover { transform: translate(calc(-50% - 38px),  -18px) rotate(0deg) scale(1.05); }
+  .fan-wrap:hover .fan-card:nth-child(4):hover { transform: translate(calc(-50% + 38px),  -18px) rotate(0deg) scale(1.05); }
+  .fan-wrap:hover .fan-card:nth-child(5):hover { transform: translate(calc(-50% + 114px), -14px) rotate(0deg) scale(1.05); }
+  .fan-wrap:hover .fan-card:nth-child(6):hover { transform: translate(calc(-50% + 190px), -8px) rotate(0deg) scale(1.05); }
 }
 
 /* Touch devices can't hover — show the fan permanently spread instead */
@@ -1337,7 +1345,7 @@ footer { background: rgba(4,5,8,0.85); padding: 2rem 5%; border-top: 1px solid r
   .fan-card:nth-child(6) { transform: translate(calc(-50% + 150px), 8px) rotate(0deg); z-index: 6; }
 }
 
-.fan-caption { font-size: .62rem; letter-spacing: .1em; text-transform: uppercase; color: rgba(200,168,74,.4); margin-top: 3.2rem; }
+.fan-caption { font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; color: rgba(200,168,74,.55); margin-top: 3.2rem; font-weight: 600; }
 
 .term-box {
   width: 260px;
@@ -1378,7 +1386,7 @@ footer { background: rgba(4,5,8,0.85); padding: 2rem 5%; border-top: 1px solid r
   .fan-stack { width: 280px; height: 130px; }
   .fan-card { width: 62px; height: 86px; border-radius: 10px; gap: .35rem; }
   .fan-icon svg { width: 20px; height: 20px; }
-  .fan-name { font-size: .56rem; padding: .22rem .45rem; }
+  .fan-name { font-size: .72rem; padding: .3rem .6rem; }
   .term-box { width: 90vw; max-width: 300px; }
   .term-body { font-size: .62rem; }
 
