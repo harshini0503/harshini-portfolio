@@ -1210,18 +1210,21 @@ footer { background: rgba(4,5,8,0.85); padding: 2rem 5%; border-top: 1px solid r
 .buddy-mouth { transition: transform .2s var(--ease); }
 
 .buddy-hand {
-  position: absolute; top: -8px; right: -6px; font-size: 19px;
+  position: absolute; top: -10px; right: -8px; font-size: 24px;
   opacity: 0; transform-origin: 70% 70%;
-  animation: buddyWave 9s ease-in-out infinite;
+  animation: buddyWave 5s ease-in-out infinite;
   pointer-events: none;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,.5));
 }
 @keyframes buddyWave {
-  0%, 78% { opacity: 0; transform: rotate(0deg); }
-  81% { opacity: 1; transform: rotate(-18deg); }
-  85% { transform: rotate(18deg); }
-  89% { transform: rotate(-14deg); }
-  93% { transform: rotate(10deg); opacity: 1; }
-  97%, 100% { opacity: 0; transform: rotate(0deg); }
+  0%, 34% { opacity: 0; transform: rotate(0deg) scale(1); }
+  38% { opacity: 1; transform: rotate(-22deg) scale(1.1); }
+  44% { transform: rotate(22deg) scale(1.1); }
+  50% { transform: rotate(-20deg) scale(1.1); }
+  56% { transform: rotate(18deg) scale(1.1); }
+  62% { transform: rotate(-12deg) scale(1.1); }
+  68% { transform: rotate(0deg) scale(1); opacity: 1; }
+  74%, 100% { opacity: 0; transform: rotate(0deg) scale(1); }
 }
 
 .buddy-spark {
